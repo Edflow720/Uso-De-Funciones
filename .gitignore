@@ -1,23 +1,70 @@
-# Compiled class file
-*.class
+package funciones;
 
-# Log file
-*.log
+import java.util.Scanner;
 
-# BlueJ files
-*.ctxt
+public class Funciones {
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner (System.in);
+        int A[][], B[][], C[][], a = 0, b = 0;
+        
+        System.out.print("Digite el número de Filas: ");
+        a = entrada.nextInt();
+        System.out.print("Digite el número de Columnas: ");
+        b = entrada.nextInt();
+        
+        A = new int[a][b];
+        
+        for (int i = 0; i < a; i++){
+            for (int j = 0; j < b; j++){
+                System.out.print("Valor Matriz ["+i+1+"]["+j+1+"]: ");
+                A[i][j] = entrada.nextInt();
+            }
+        }
+        
+        imprimir(A, a, b);
+        
+        System.out.println("");
+        System.out.println("");
+        
+        B = new int[a][b];
+        
+        for (int i = 0; i < a; i++){
+            for (int j = 0; j < b; j++){
+                System.out.print("Valor Matriz ["+i+1+"]["+j+1+"]: ");
+                B[i][j] = entrada.nextInt();
+            }
+        }
+        
+        imprimir(B, a, b);
+        
+        System.out.println("");
+        System.out.println("");
+        
+        C = new int[a][b];
+        
+        for (int i = 0; i < a; i++){
+            for (int j = 0; j < b; j++){
+                System.out.print("Valor Matriz ["+i+1+"]["+j+1+"]: ");
+                C[i][j] = entrada.nextInt();
+            }
+        }
+        
+        imprimir(C, a, b);
+        
+        System.out.println("");
+        System.out.println("");
+        
+        
+    }
+    
+    public static void imprimir (int X[][], int y, int z){
+        for (int i = 0; i < y; i++){
+            for (int j = 0; j < z; j++){
+                System.out.print(X[i][j] + "    ");
+            }
+            System.out.println("");
+        }
+    }
+}
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
